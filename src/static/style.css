@@ -1,0 +1,187 @@
+html {
+	font: 1.2em/1.4 Arial, Helvetica, sans-serif;
+}
+body {
+
+	padding: 0 0 1em;
+	background-color:rgba(253, 255, 201, 0.60); /* #f4f5f2;  */
+		
+}
+
+ul{
+	list-style: none;
+}
+
+header > h1 {
+	text-align: center;
+}
+
+.AppointmentFieldSet > legend {
+	width:100%;
+	text-align: center;
+}
+
+fieldset{
+	display: flex;
+	flex-direction: column;
+}
+
+fieldset > button {
+	align-self: center;
+}
+label[for="Name"], label[for="Owner"]{
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: nowrap;
+}
+
+.Start, label[for="End"]{
+	display: flex;
+	padding-left: 20%;
+	padding-right: 20%;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.appointment{
+	border-style: solid;
+	border-width: 0.25px;
+}
+
+	.middleSection{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		text-align:center;
+	}	
+	.filters {
+		padding: 0;
+		display: inline-flex;
+	}
+
+@media screen and (min-width: 70em){
+
+	form{
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: center;
+	}
+
+	label[for="Name"], label[for="Owner"]
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: nowrap;
+	}
+	.Start,label[for="End"]{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	.appointment-list{
+		padding: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		text-align:center;
+	}
+	.appointment {
+		margin-left: 5px;
+	}
+	.appointment > dl, dd{
+		text-align: center;
+		margin: 0px;
+		padding: 5px;
+	}
+	/*.appointment , dl:nth-child(odd){ */
+	.appointment > dl {
+		background-color:rgba(194, 188, 200, 0.29); /* #c2bcc8;*/
+	}
+	.appointment > dl dt{
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-color: rgba(0, 0, 0, 0.2);
+		font-style: italic;
+	}
+	.appointment > dl ,  dd{
+		background-color: rgba(194, 179, 63, 0.2); /*#c2b33f; */
+	}
+	.middleSection{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		text-align:center;
+	}	
+	.filters {
+		padding: 0;
+		display: inline-flex;
+	}
+
+}
+@media screen and (min-width: 30em){
+
+	form{
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: center;
+	}
+
+	label[for="Name"], label[for="Owner"]{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: nowrap;
+	}
+	.Start,label[for="End"]{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.appointment-list{
+		padding: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		text-align:center;
+	}
+	.appointment {
+		margin-left: 5px;
+	}
+	.appointment > dl, dd{
+		text-align: center;
+		margin: 0px;
+		padding: 5px;
+	}
+	/*.appointment , dl:nth-child(odd){ */
+	.appointment > dl {
+		background-color:rgba(194, 188, 200, 0.29); /* #c2bcc8;*/
+	}
+	.appointment > dl dt{
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		border-bottom-color: rgba(0, 0, 0, 0.2);
+		font-style: italic;
+	}
+	.appointment > dl ,  dd{
+		background-color: rgba(194, 179, 63, 0.2); /*#c2b33f; */
+	}
+	.middleSection{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		text-align:center;
+	}	
+	.filters {
+		padding: 0;
+		display: inline-flex;
+	}
+}
+

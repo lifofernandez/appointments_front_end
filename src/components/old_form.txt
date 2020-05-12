@@ -1,0 +1,23 @@
+			<form onSubmit={
+				this.handleSubmit
+			}>
+					<Label className="Name" children="Name"
+					element= <TextInput className="Name" value={this.state.name} onChange={this.handleNameChange} /> 
+					/>
+					<Label className="Owner" children="Owner"
+					element = <TextInput className="Owner" value={this.state.owner} onChange={this.handleOwnerChange} /> 
+					/>
+					<DateTimeInput 
+						children="Start"
+						className="Start"
+						dateInputValue={this.state.date}
+						onChangeDate={this.handleDateChange}
+						onChangeTime={this.handleStartChange}
+					/>
+					<Label className="End" children="End"
+					element=<DateInput name="End" value={this.state.end} onChange={this.handleEndChange} /> 
+					/>
+					<button type="submit">
+						Add Date
+					</button>
+			</form>
