@@ -18,6 +18,7 @@ AppointmentList.propTypes = {
 		date: PropTypes.string.isRequired,
 		start: PropTypes.string.isRequired,
 	}).isRequired).isRequired,
+	actions:PropTypes.object.isRequired
 }
 
 export default AppointmentList

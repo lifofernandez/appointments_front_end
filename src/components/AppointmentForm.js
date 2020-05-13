@@ -10,7 +10,8 @@ export default class AppointmentForm extends Component {
 		owner: PropTypes.string,
 		date : PropTypes.string,
 		start: PropTypes.string,
-		end  : PropTypes.string
+		end  : PropTypes.string,
+		inputComponent: PropTypes.element.isRequired
 	}
 	
 	state = {
@@ -68,11 +69,14 @@ export default class AppointmentForm extends Component {
 			<form onSubmit={
 				this.handleSubmit
 			} className="AppointmentForm">
-				<AppointmentFieldSet
-					props={this.state}
-					handlers={handlers} 
-				/>
+				{React.cloneElement(this.props.inputComponent,
+						{ props:this.state,handlers:handlers})}
 			</form>
 		)
 	}
 }
+
+//				<AppointmentFieldSet
+//					props={this.state}
+//					handlers={handlers} 
+//				/>

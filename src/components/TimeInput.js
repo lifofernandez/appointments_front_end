@@ -9,21 +9,25 @@ const now = moment().hour(0).minute(0);
 const format = 'HH:mm a';
 
 const TimeInput = ({
-		onChange, date	
-	}) => (
-		<TimePicker
-			showSecond = { false }
-			defaultValue = { date ? date : now } 
-			className = 'xxx'
-			onChange = { onChange }
-			format = { format }
-			use12Hours
-			inputReadOnly
-		/>
-)
+		onChange, time 
+	}) => {
+		let timeInput = time ? moment(time, 'HH:mm') : null
+		return (
+			<TimePicker
+				showSecond = { false }
+				defaultValue = { timeInput ? timeInput : now} 
+				className = 'xxx'
+				onChange = { onChange }
+				format = { format }
+				use12Hours
+				inputReadOnly
+			/>
+		)
+}
 
 TimeInput.propTypes = {
-	onChange: PropTypes.func.isRequired
+	onChange: PropTypes.func.isRequired,
+	time: PropTypes.string
 }
 
 export default TimeInput

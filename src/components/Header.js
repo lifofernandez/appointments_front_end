@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AppointmentForm from './AppointmentForm'
+import AppointmentFieldSet from './AppointmentFieldSet'
 
 const Header = ({ addAppointment }) => (
 	<header>
@@ -9,6 +10,7 @@ const Header = ({ addAppointment }) => (
 			onSave={(data) => {
 				addAppointment(data)
 			}}
+			inputComponent={<AppointmentFieldSet />}
 		/>
 	</header>
 )

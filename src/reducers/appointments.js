@@ -25,8 +25,15 @@ const appointments = ( state = [], action) => {
 		case EDIT_APPOINTMENT:
 			return state.map( appointment =>
 				appointment.id === action.id ?
-					{ ...action.data } :
-					appointment
+					{ 
+						id: action.id,
+						name: action.name,
+						owner: action.owner,
+						date: action.date,
+						start: action.start,
+						end: action.end
+					}
+					: appointment
 			)
 		default:	
 			return state
