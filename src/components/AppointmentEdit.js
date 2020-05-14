@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import TextInput from './TextInput'
 import TimeInput from './TimeInput'
 import DateInput from './DateInput'
-import DateTimeInput from './DateTimeInput'
 
 const AppointmentEdit = ({ 
 	props, handlers 
@@ -30,8 +29,8 @@ const AppointmentEdit = ({
 	}
 
 AppointmentEdit.propTypes = {
-	props: PropTypes.object.isRequired,
-	handlers: PropTypes.object.isRequired
+	props: PropTypes.object,
+	handlers: PropTypes.object
 }
 
 export default AppointmentEdit

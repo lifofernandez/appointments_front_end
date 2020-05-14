@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TextInput from './TextInput'
 import TimeInput from './TimeInput'
-import DateInput from './DateInput'
 import DateTimeInput from './DateTimeInput'
 import Label from './Label'
 
 const AppointmentFieldSet = ({
 	props, handlers
 	}) => {
-		const { name, owner, date, end } = props
+		const { name, owner, date } = props
 		const { handleNameChange, handleOwnerChange, 
 						handleDateChange, handleStartChange,
 						handleEndChange } = handlers
@@ -40,8 +39,8 @@ const AppointmentFieldSet = ({
 	}
 
 AppointmentFieldSet.propTypes = {
-	props: PropTypes.object.isRequired,
-	handlers: PropTypes.object.isRequired
+	props: PropTypes.object,
+	handlers: PropTypes.object
 }
 
 export default AppointmentFieldSet

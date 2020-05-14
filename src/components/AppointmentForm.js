@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import moment from 'moment'
-import AppointmentFieldSet from './AppointmentFieldSet'
 
 export default class AppointmentForm extends Component {
 	static  propTypes = {

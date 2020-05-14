@@ -24,7 +24,7 @@ export default class AppointmentItem extends Component{
 
 	render(){
 		const { id, name, owner, date, start, end } = this.props.appointment
-		const { appointment, deleteAppointment, editAppointment } = this.props
+		const { appointment, deleteAppointment } = this.props
 		let element
 		if(this.state.editing){
 			element = (
