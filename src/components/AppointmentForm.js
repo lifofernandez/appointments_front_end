@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+
 export default class AppointmentForm extends Component {
 	static  propTypes = {
 		onSave: PropTypes.func.isRequired,
@@ -56,20 +57,23 @@ export default class AppointmentForm extends Component {
 	render() {
 		const handlers = {
 			handleNameChange : this.handleNameChange,
-			handleOwnerChange:this.handleOwnerChange,
+			handleOwnerChange: this.handleOwnerChange,
 			handleDateChange : this.handleDateChange,
-			handleStartChange:this.handleStartChange,
-			handleEndChange	 :  this.handleEndChange
+			handleStartChange: this.handleStartChange,
+			handleEndChange	 : this.handleEndChange
 		}
 	
 		return(
-			
 			<form onSubmit={
 				this.handleSubmit
-			} className="AppointmentForm">
-				{React.cloneElement(this.props.inputComponent,
-						{ props:this.state,handlers:handlers})}
+			} className="AppointmentForm"> {
+				React.cloneElement(
+					this.props.inputComponent,
+					{ props:this.state,handlers:handlers}
+				)
+			}
 			</form>
+
 		)
 	}
 }

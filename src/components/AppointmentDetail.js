@@ -2,20 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const AppointmentDetail = ({
-	name, owner, date, start, end
+	id, name, owner, date, start, end
 }) => (
-	<dl>
-		<dt>Appointment name</dt>
-		<dd> { name } </dd>
-		<dt>Owner</dt>
-		<dd> { owner } </dd>
-		<dt>Date</dt>
-		<dd> { date } </dd>
-		<dt>Start</dt>
-		<dd> { start } </dd>
-		<dt>End</dt>
-		<dd> { end } </dd>
-	</dl>
+	<>
+		<td> { id }  </td>
+		<td> { name }  </td>
+		<td> { owner } </td>
+		<td> { date }  </td>
+		<td> { start } </td>
+		<td> { end }   </td>
+	</>
 )
 
 AppointmentDetail.propTypes = {

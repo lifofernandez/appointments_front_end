@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import Button from 'react-bootstrap/Button'
 
 const Link = ({ active, children, setFilter }) => 
 	(
-		<button
+		<Button
 			className={ classnames({ selected : active })}
 			style={{ cursor: 'pointer' }}
 			onClick= {() => setFilter()}
 		>
 			{children}
-		</button>
+		</Button>
 	)
 
 Link.propTypes = {

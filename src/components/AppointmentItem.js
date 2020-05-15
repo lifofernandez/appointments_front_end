@@ -4,6 +4,9 @@ import AppointmentDetail from './AppointmentDetail'
 import AppointmentForm from './AppointmentForm'
 import AppointmentEdit from './AppointmentEdit'
 
+import Button from 'react-bootstrap/Button'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+
 export default class AppointmentItem extends Component{
 	static propTypes = {
 		appointment: PropTypes.object.isRequired,
@@ -33,7 +36,8 @@ export default class AppointmentItem extends Component{
 						this.handleSave(id, data)
 					}
 					inputComponent={<AppointmentEdit />}
-				  name = {name}	
+				  	id = {id}	
+				  	name = {name}	
 					owner = {owner}
 					date = {date}
 					start = {start}
@@ -48,12 +52,15 @@ export default class AppointmentItem extends Component{
 			)
 		}
 		return (
-			<li className="appointment">
+			<tr className="appointment">
 				{ element }
-				<button onClick={() => deleteAppointment(appointment.id)}>Delete</button>
-				<button onClick={this.handleEdit}>Edit</button>
-			
-			</li>
+				<td>
+				<ButtonGroup size="sm" >
+				<Button onClick={this.handleEdit}>Edit</Button>
+				<Button variant="danger" onClick={() => deleteAppointment(appointment.id)}>Delete</Button>
+				</ButtonGroup>
+				</td>
+			</tr>
 		)
 	}
 }
